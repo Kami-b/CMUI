@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/Cover_App">
+    android:background="@drawable/coverapp">
 
     <Button
         android:id="@+id/button"
@@ -21,10 +21,12 @@
         android:textAlignment="center"
         android:textColor="#FFF"
         android:textSize="30sp"
+        android:onClick="openMenu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.994" />
+        app:layout_constraintVertical_bias="0.994"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
