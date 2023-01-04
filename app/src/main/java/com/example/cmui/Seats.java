@@ -20,7 +20,7 @@ public class Seats extends AppCompatActivity {
         startActivity(new Intent(this, MenuActivity.class));
     }
 
-    public void onToggleClick(View view) {
-        Toast.makeText(this, "A1", Toast.LENGTH_SHORT).show();
+   public void onToggleClick(View view) {
+        Toast.makeText(this, "1 Seat Occupied", Toast.LENGTH_SHORT).show();
     }
 }
