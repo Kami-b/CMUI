@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DashBoard"
-    android:background="#d3d3d3">
+    android:background="#d3d3d3"
+    tools:context=".DashBoard">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -97,43 +97,46 @@
         app:layout_constraintVertical_bias="0.108"
         app:srcCompat="@drawable/house8" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="20dp"
-        android:background="#FFFFFF"
-        android:text="2022 - 11 -20"
+    <Button
+        android:id="@+id/datePickerButton"
+        style="?android:spinnerStyle"
+        android:layout_width="317dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:onClick="openDatePicker"
+        android:text="JAN 01 2020"
+        android:textColor="#777777"
         android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/humi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Temperature" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="20dp"
-        android:background="#FFFFFF"
-        android:text="2023 - 01 -08"
+    <Button
+        android:id="@+id/datePickerButtonto"
+        style="?android:spinnerStyle"
+        android:layout_width="317dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:onClick="openDatePicker"
+        android:text="JAN 01 2020"
         android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        android:textColor="#777777"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/humi2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/humi" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
