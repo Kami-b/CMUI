@@ -1,15 +1,16 @@
 package com.example.cmui;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.app.DatePickerDialog;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.Spinner;
 
+import androidx.appcompat.app.AppCompatActivity;
 import java.util.Calendar;
 
 public class DashBoard extends AppCompatActivity {
@@ -18,6 +19,8 @@ public class DashBoard extends AppCompatActivity {
     private Button dateButton;
     private DatePickerDialog toDatePickerDialog;
     private Button toDateButton;
+
+    private Spinner dropDownMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +40,15 @@ public class DashBoard extends AppCompatActivity {
         //Set the Current date in the To Button text
         toDateButton = findViewById(R.id.datePickerButtonto);
         toDateButton.setText(tgetTodaysDate());
+
+        //Set the Dropdown Menu
+        dropDownMenu =  findViewById(R.id.dropdown);
+        String[] dashMenu = getResources().getStringArray(R.array.dropdown_container);
+        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, dashMenu);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        dropDownMenu.setAdapter(adapter);
+
+
     }
     //Home button to get back to main menu
     public void openMenu(View view) {
@@ -53,7 +65,7 @@ public class DashBoard extends AppCompatActivity {
         int day = cal.get(Calendar.DAY_OF_MONTH);
         return makeDateString(day, month, year);
     }
-
+//Get the date from the date picker and show as the text
     private void initDatePicker()
     {
         DatePickerDialog.OnDateSetListener dateSetListener = new DatePickerDialog.OnDateSetListener()
@@ -66,7 +78,7 @@ public class DashBoard extends AppCompatActivity {
                 dateButton.setText(date);
             }
         };
-
+        // to set the date
         Calendar cal = Calendar.getInstance();
         int year = cal.get(Calendar.YEAR);
         int month = cal.get(Calendar.MONTH);
@@ -75,7 +87,6 @@ public class DashBoard extends AppCompatActivity {
         int style = AlertDialog.THEME_HOLO_LIGHT;
 
         datePickerDialog = new DatePickerDialog(this, style, dateSetListener, year, month, day);
-        //datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
 
     }
 
@@ -84,6 +95,7 @@ public class DashBoard extends AppCompatActivity {
         return getMonthFormat(month) + " " + day + " " + year;
     }
 
+    // Show the month format in abbreviation
     private String getMonthFormat(int month)
     {
         if(month == 1)
@@ -114,14 +126,14 @@ public class DashBoard extends AppCompatActivity {
         //default should never happen
         return "JAN";
     }
-
+    //Show the PickerData text in the "From" button
     public void openDatePicker(View view)
     {
         datePickerDialog.show();
     }
 
 
-//Create the Data picker for to Calendar
+//Create the Data picker for to To Calendar
 
     private String tgetTodaysDate()
     {
@@ -132,7 +144,7 @@ public class DashBoard extends AppCompatActivity {
         int tday = tcal.get(Calendar.DAY_OF_MONTH);
         return tmakeDateString(tday, tmonth, tyear);
     }
-
+//Get the date from the listener and show in the To text button
     private void toInitDatePicker()
     {
         DatePickerDialog.OnDateSetListener dateSetListener = new DatePickerDialog.OnDateSetListener()
@@ -157,12 +169,13 @@ public class DashBoard extends AppCompatActivity {
         //datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
 
     }
-
+    //Set the format to show the date
     private String tmakeDateString(int tday, int tmonth, int tyear)
     {
         return getMonthFormat(tmonth) + " " + tday + " " + tyear;
     }
 
+    // Show the month format in abbreviation
     private String tgetMonthFormat(int tmonth)
     {
         if(tmonth == 1)
@@ -193,7 +206,7 @@ public class DashBoard extends AppCompatActivity {
         //default should never happen
         return "JAN";
     }
-
+    //Show the PickerData text in the "To" button
     public void toOpenDatePicker(View view)
     {
         toDatePickerDialog.show();

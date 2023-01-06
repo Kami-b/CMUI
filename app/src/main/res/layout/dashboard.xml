@@ -65,20 +65,6 @@
         app:layout_constraintHorizontal_bias="0.117"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="85dp"
-        android:backgroundTint="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/humi2" />
-
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="100dp"
@@ -109,8 +95,8 @@
         android:background="@color/white"
         android:onClick="openDatePicker"
         android:text="JAN 01 2023"
-        android:textColor="#777777"
         android:textAlignment="center"
+        android:textColor="#777777"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/humi"
         app:layout_constraintEnd_toEndOf="parent"
@@ -138,5 +124,41 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/humi" />
 
+    <Spinner
+        android:id="@+id/dropdown"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="10dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toTopOf="@+id/showbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/humi2" />
+
+    <Button
+        android:id="@+id/showbutton"
+        android:layout_width="178dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/main_btn"
+        android:backgroundTintMode="add"
+        android:onClick="openMenu"
+        android:shadowColor="#3e3e3e"
+        android:text="Show"
+        android:textAlignment="center"
+        android:textColor="#FFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dropdown_menu"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
