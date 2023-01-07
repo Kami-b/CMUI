@@ -7,7 +7,7 @@
     android:background="#d3d3d3"
     tools:context=".Capacity">
 
-    <!-- Home Button -->
+    <!-- HomeButton -->
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="100dp"
