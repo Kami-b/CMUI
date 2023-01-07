@@ -1,12 +1,12 @@
 package com.example.cmui;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 import android.widget.ToggleButton;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Seats extends AppCompatActivity {
 
@@ -17,6 +17,8 @@ public class Seats extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+
+        //To open the Seats page
         setContentView(R.layout.seats);
 
         //Show the long click text in the A3 Seat
@@ -30,12 +32,12 @@ public class Seats extends AppCompatActivity {
         });
 
     }
-
+    //To open the Menu page
     public void openMenu(View view) {
         startActivity(new Intent(this, MenuActivity.class));
     }
 
-   //Show the text that Seats occupation
+   //Show the text that Seats occupied when the seat deactivate
     public void onToggleClick(View view) {
         Toast.makeText(this, "1 Seat Occupied", Toast.LENGTH_SHORT).show();
     }

@@ -8,7 +8,7 @@
     android:background="#d3d3d3"
     >
 
-
+    <!-- Capacity Button -->
     <Button
         android:id="@+id/button2"
         android:layout_width="0dp"
@@ -27,6 +27,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Temperature Button -->
     <Button
         android:id="@+id/button3"
         android:layout_width="0dp"
@@ -46,6 +47,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
 
+    <!-- Available Seats Button -->
     <Button
         android:id="@+id/button4"
         android:layout_width="0dp"
@@ -65,6 +67,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button3" />
 
+    <!-- Dashboard Button-->
     <Button
         android:id="@+id/button7"
         android:layout_width="0dp"
@@ -84,6 +87,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button4" />
 
+    <!-- Capacity Image -->
     <ImageView
         android:id="@+id/group"
         android:layout_width="70dp"
@@ -98,6 +102,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/groupusers" />
 
+    <!-- Temperature Image -->
     <ImageView
         android:id="@+id/temp"
         android:layout_width="70dp"
@@ -112,6 +117,7 @@
         app:layout_constraintTop_toBottomOf="@+id/group"
         app:srcCompat="@drawable/thermometer" />
 
+    <!-- Seats Image -->
     <ImageView
         android:id="@+id/chair"
         android:layout_width="70dp"
@@ -126,6 +132,7 @@
         app:layout_constraintTop_toBottomOf="@+id/temp"
         app:srcCompat="@drawable/officechair" />
 
+    <!-- Dashboard Image -->
     <ImageView
         android:id="@+id/pie"
         android:layout_width="70dp"

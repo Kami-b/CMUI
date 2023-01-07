@@ -7,6 +7,7 @@
     android:background="#d3d3d3"
     tools:context=".DashBoard">
 
+    <!-- Dashboard Image -->
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
@@ -20,6 +21,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/piegraph" />
 
+    <!-- From Text -->
     <TextView
         android:id="@+id/Temperature"
         android:layout_width="wrap_content"
@@ -35,6 +37,7 @@
         app:layout_constraintHorizontal_bias="0.208"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- To Text -->
     <TextView
         android:id="@+id/humi"
         android:layout_width="wrap_content"
@@ -50,6 +53,7 @@
         app:layout_constraintHorizontal_bias="0.166"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- Report Text -->
     <TextView
         android:id="@+id/humi2"
         android:layout_width="wrap_content"
@@ -65,6 +69,7 @@
         app:layout_constraintHorizontal_bias="0.117"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- Home Button -->
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="100dp"
@@ -83,6 +88,7 @@
         app:layout_constraintVertical_bias="0.108"
         app:srcCompat="@drawable/house8" />
 
+    <!-- From Date picker -->
     <Button
         android:id="@+id/datePickerButton"
         style="?android:spinnerStyle"
@@ -103,6 +109,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Temperature" />
 
+    <!-- To Date picker -->
     <Button
         android:id="@+id/datePickerButtonto"
         style="?android:spinnerStyle"
@@ -124,6 +131,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/humi" />
 
+    <!-- Dropdown menu -->
     <Spinner
         android:id="@+id/dropdown"
         android:layout_width="match_parent"
@@ -139,6 +147,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/humi2" />
 
+    <!-- Show Button -->
     <Button
         android:id="@+id/showbutton"
         android:layout_width="178dp"
@@ -159,6 +168,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dropdown_menu"/>
+        app:layout_constraintTop_toBottomOf="@+id/dropdown"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

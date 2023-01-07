@@ -2,6 +2,7 @@
     <string name="app_name">CMUI</string>
     <string name="Welcomebutton">Welcome</string>
 
+    <!-- Items for the Dropdown menu in Dashboard page -->
     <string-array name="dropdown_container">
         <item>Most crowded</item>
         <item>Less Crowded</item>

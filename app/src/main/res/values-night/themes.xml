@@ -1,5 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
+
+    <!-- To change the color of the button change "Theme.MaterialComponents.DayNight.DarkActionBar"
+    to "Theme.AppCompat.Light.NoActionBar" -->
     <style name="Theme.CMUI" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_200</item>
